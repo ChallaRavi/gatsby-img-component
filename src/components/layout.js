@@ -2,6 +2,7 @@ import React from "react"
 import { Global, css } from "@emotion/core"
 import Helmet from "react-helmet"
 import Header from "./header"
+
 import useSiteMetadata from "../hooks/use-sitemetadata"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -17,9 +18,9 @@ const Layout = ({ children }) => {
             box-sizing: border-box;
             margin: 0;
           }
-          * + * {
+          /* * + * {
             margin-top: 1rem;
-          }
+          } */
           html,
           body {
             margin: 0;
@@ -29,6 +30,8 @@ const Layout = ({ children }) => {
               "Segoe UI Emoji", "Segoe UI Symbol";
             font-size: 18px;
             line-height: 1.4;
+            text-align: center;
+            text-transform: capitalize;
             > div {
               margin-top: 0;
             }
@@ -40,7 +43,9 @@ const Layout = ({ children }) => {
           h5,
           h6 {
             color: #222;
-            line-height: 1.1;
+            line-height: 2.1;
+            text-transform: capitalize;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
             + * {
               margin-top: 0.5rem;
             }
@@ -62,7 +67,6 @@ const Layout = ({ children }) => {
       <main
         css={css`
           margin: 2rem auto;
-          max-width: 550px;
         `}
       >
         {children}
